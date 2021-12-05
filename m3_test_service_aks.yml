@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: isens-m3-iqualimeter-deployment-service
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   selector:
     app: isens-m3-iqualimeter
   ports:
