@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: isens_m3_iqualimeter_deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: isens_m3_iqualimeter
+  template:
+    metadata:
+      labels:
+        app: isens_m3_iqualimeter
+    spec:
+      containers:
+        - name: isens_m3_iqualimeter_container
+          image: isensacr.azurecr.io/isens-m3-py
+          ports:
+            - containerPort: 5000

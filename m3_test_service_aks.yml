@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: isens_m3_iqualimeter_deployment_service
+spec:
+  type: ClusterIP
+  selector:
+    app: isens_m3_iqualimeter
+  ports:
+    - port: 5000
+      targetPort: 5000
